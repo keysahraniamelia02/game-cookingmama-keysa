@@ -4,15 +4,48 @@
 <head>
   <title>Membuat Form</title>
 
-<!-- CSS di sini -->
-<style>
-  form {
-    background: white;
-  }
-  legend {
-    font-weight: bold;
-  }
-</style>
+  <!-- CSS di sini -->
+  <style>
+    body {
+      background-color: gray;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    form {
+      background: rgb(202, 196, 196);
+      padding: 20px;
+      border-radius: 10px;
+      width: 350px;
+    }
+
+    fieldset {
+      border: 3px solid black;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: black;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      padding: 5px;
+      vertical-align: top;
+    }
+
+    button[type="submit"],
+    button[type="reset"] {
+      background-color: rgb(141, 130, 130);
+    }
+  </style>
 </head>
 
 <body>
@@ -29,7 +62,7 @@
 
         <tr>
           <td>Password</td>
-          <td><input type="password" name="password" placeholder="Minimal 8 karakter"></td>
+          <td><input type="password" name="password" placeholder="Minimal 8 Karakter"></td>
         </tr>
 
         <tr>
@@ -51,7 +84,7 @@
         <tr>
           <td>Jenis Kelamin</td>
           <td>
-            <input type="radio" name="jk" value="pria">Pria<br>
+            <input type="radio" name="jk" value="laki-laki">Laki-laki<br>
             <input type="radio" name="jk" value="perempuan">Perempuan
           </td>
         </tr>
@@ -59,7 +92,7 @@
         <tr>
           <td>Alamat</td>
           <td>
-            <textarea name="alamat" rows="3" placeholder="Masukan alamat lengkap"></textarea>
+            <textarea name="alamat" rows="5" placeholder="Masukan Alamat Lengkap"></textarea>
           </td>
         </tr>
 
@@ -81,8 +114,9 @@
           <td>
             <input type="checkbox" name="info" value="olahraga"> Olahraga<br>
             <input type="checkbox" name="info" value="traveling"> Traveling<br>
-            <input type="checkbox" name="info" value="bernyanyi"> Bernyanyi<br>
-            <input type="checkbox" name="info" value="menari"> Menari<br>
+            <input type="checkbox" name="info" value="fashion"> Fashion<br>
+            <input type="checkbox" name="info" value="film"> Film <br>
+            <input type="checkbox" name="info" value="kesehatan"> Kesehatan<br>
           </td>
         </tr>
       </table>
