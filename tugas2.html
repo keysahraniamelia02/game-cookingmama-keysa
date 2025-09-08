@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Membuat Form</title>
+
+<!-- CSS di sini -->
+<style>
+  form {
+    background: white;
+  }
+  legend {
+    font-weight: bold;
+  }
+</style>
+</head>
+
+<body>
+  <form action="#" method="post">
+
+    <!-- Bagian Akun -->
+    <fieldset style="width: 300px;">
+      <legend>Akun</legend>
+      <table>
+        <tr>
+          <td>Username</td>
+          <td><input type="text" name="username" placeholder="Masukan Username"></td>
+        </tr>
+
+        <tr>
+          <td>Password</td>
+          <td><input type="password" name="password" placeholder="Minimal 8 karakter"></td>
+        </tr>
+
+        <tr>
+          <td>Konfirmasi Password</td>
+          <td><input type="password" name="konfirmasi_password"></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <!-- Bagian Data -->
+    <fieldset style="width: 300px;">
+      <legend>Biodata</legend>
+      <table>
+        <tr>
+          <td>Nama</td>
+          <td><input type="text" name="nama" placeholder="Nama Lengkap"></td>
+        </tr>
+
+        <tr>
+          <td>Jenis Kelamin</td>
+          <td>
+            <input type="radio" name="jk" value="pria">Pria<br>
+            <input type="radio" name="jk" value="perempuan">Perempuan
+          </td>
+        </tr>
+
+        <tr>
+          <td>Alamat</td>
+          <td>
+            <textarea name="alamat" rows="3" placeholder="Masukan alamat lengkap"></textarea>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Program Studi</td>
+          <td>
+            <select>
+              <option value="">-- Pilih Prodi --</option>
+              <option value="TI">Teknologi Informasi</option>
+              <option value="SI">Sistem Informasi</option>
+              <option value="TI">Teknik Informatika</option>
+              <option value="ILKOM">Ilmu Komputer</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Informasi Yang Disukai</td>
+          <td>
+            <input type="checkbox" name="info" value="olahraga"> Olahraga<br>
+            <input type="checkbox" name="info" value="traveling"> Traveling<br>
+            <input type="checkbox" name="info" value="bernyanyi"> Bernyanyi<br>
+            <input type="checkbox" name="info" value="menari"> Menari<br>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <button style="margin-left: 20px; margin-top: 10px;" type="submit"><b>Daftar</b></button>
+    <button type="reset"><b>Reset</b></button>
+  </form>
+</body>
+
+</html>
