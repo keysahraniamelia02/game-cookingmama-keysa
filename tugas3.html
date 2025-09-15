@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kalkulator Aritmatika Sederhana</title>
+  <script>
+    function proses(operator) {
+      let angka1 =
+        document.getElementById("angka1").value
+      angka1 = Number(angka1)
+
+      let angka2 =
+        document.getElementById("angka2").value
+      angka2 = Number(angka2)
+      let hasil;
+
+      let output =
+        document.getElementById("output")
+
+      switch (operator) {
+        case "+":
+          hasil = angka1 + angka2;
+          break;
+        case "-":
+          hasil = angka1 - angka2;
+          break;
+        case "*":
+          hasil = angka1 * angka2;
+          break;
+        case "/":
+          hasil = angka1 / angka2;
+          break;
+      }
+      output.value = hasil
+    }
+  </script>
+
+  <style>
+    body {
+      background: rgb(71, 63, 63);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      background: rgb(137, 127, 127);
+      padding: 40px;
+      border-radius: 10px;
+      font-size: 19px;
+      box-shadow: 0 0 8px;
+    }
+
+    table {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .button {
+      flex: 1;
+      margin: 0 3px;
+      padding: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 400px;
+    }
+    
+    button:hover {
+      background: rgb(97, 90, 90);
+    }
+
+    input {
+      width: 100%;
+      padding: 6px;
+      margin-bottom: 15px;
+      font-size: 15px;
+      border: 2px solid rgb(57, 53, 53);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <form name="formdaftar">
+    <table class="box">
+      <tr>
+        <td>Input Bilangan 1</td>
+        <td><input type="number" name="angka1" id="angka1" size="30"></td>
+      </tr>
+      <tr>
+        <td>Input Bilangan 2</td>
+        <td><input type="number" name="angka2" id="angka2" size="30"></td>
+      </tr>
+
+      <tr class="button">
+        <td></td>
+        <td>
+          <button type="button" name="submit" onclick="proses('+')">+</button>
+          <button type="button" name="submit" onclick="proses('-')">-</button>
+          <button type="button" name="submit" onclick="proses('*')">*</button>
+          <button type="button" name="submit" onclick="proses('/')">/</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td><b>Output</b></td>
+        <td><input type="number" name="output" id="output" readonly></td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>
